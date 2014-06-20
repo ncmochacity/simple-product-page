@@ -1,0 +1,178 @@
+@font-face {
+	font-family: 'icomoon';
+	src:url('../fonts/icomoon.eot');
+	src:url('../fonts/icomoon.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/icomoon.woff') format('woff'),
+		url('../fonts/icomoon.ttf') format('truetype'),
+		url('../fonts/icomoon.svg#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+*{
+	box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	margin:0;
+    padding:0;
+    min-height: 0;
+}
+body{
+	font-family: 'roboto',sans-serif;
+	font-weight:300;
+}
+html,body{
+	
+	letter-spacing: 0.1em;
+	
+}
+h1{
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 2em;
+	padding:40px;
+	color:#eee;
+}
+h2{
+	text-align: center;
+	padding-bottom: 40px;
+	margin-top: 40px;
+	font-weight: 100;
+	font-size: 1.5em;
+}
+p{
+	display:block;
+	padding:0 40px 15px 40px;
+	margin: 0 90px;
+}
+.wrapper{
+	width:100%;
+    height:auto;
+}
+.main{
+	width:auto;
+	height:700px;
+	background: url("../images/wanted.png") bottom center no-repeat #a0dbbd;
+}
+.main .article{
+	position:absolute;
+	top:30px;
+	left:0;
+	right:0;
+}
+@-webkit-keyframes fadeIn{
+	from{
+		opacity:0;
+	}
+	to{
+		opacity:1;
+	}
+}
+@-moz-keyframes fadeIn{
+	from{
+		opacity:0;
+	}
+	to{
+		opacity:1;
+	}
+}
+@keyframes fadeIn{
+	from{
+		opacity:0;
+	}
+	to{
+		opacity:1;
+	}
+}
+#menu{
+	line-height: 3;
+	position:relative;
+	left:20em;
+	opacity:0;
+	color:#666;
+	animation-name:fadeIn;
+	animation-duration:1s;
+
+}
+#menu ul{
+	padding: 0;
+    margin: 0em 4em 0 0;
+    list-style: none;
+    cursor: pointer;
+    transition: opacity 0s linear 205s;
+}
+#menu ul li{
+	display:inline-block;
+	margin:0 0 0px 0;
+
+}
+#menu ul li a{
+	padding:10px;
+	display: block;
+	line-height: 3;
+	letter-spacing: 3px;
+	color:#666;
+}
+a{
+	position:relative;
+
+}
+.animate{
+	-moz-transition: 2s ease-in;
+	-webkit-transition: 2s ease-in;
+	transition: 2s ease-in;
+/* use fadeIn animation defined, timing function: ease-in and repeat only 1 time*/
+	-moz-animation: fadeIn ease-in 1;
+	-webkit-animation: fadeIn ease-in 1;
+	animation: fadeIn ease-in 1;
+/*make sure that animation remains at the last keyframe: opacity: 1 when its complete */
+	-webkit-animation-fill-mode: forwards;
+	-webkit-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+
+	-webkit-animation-duration: 1s;
+	-moz-animation-duration: 1s;	
+	animation-duration: 1s;
+}
+#menu.animate{
+	-webkit-transform: translate(10em,0);
+	-moz-transform: translate(10em,0);
+	transform: translate(10em,0);
+}
+[data-icon]:before{
+	font-family: 'icomoon';
+	content:attr(data-icon);
+	speak:none;
+	font-weight: 700;
+	font-variant: normal;
+	line-height: 1;
+	position:relative;
+	-webkit-font-smoothing:antialiased;
+}
+.apple:before{
+	content: "\e603";
+	font-family: 'icomoon';
+	speak:none;
+	font-size: 3em;
+	margin-right: 15px;
+}
+.windows:before{
+	content:"\e604";
+	font-family:'icomoon';
+	speak:none;
+	font-size: 3em;
+	margin-right: 15px;
+}
+.linux:before{
+	content:"\e602";
+	font-family: 'icomoon';
+	speak:none;
+	font-size: 3em;
+	margin-right: 15px;
+}
+.git:before{
+	content: "\e600";
+	font-family: 'icomoon';
+	speak:none;
+	font-size: 3em;
+	margin-right: 15px;
+}
